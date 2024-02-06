@@ -7,7 +7,10 @@
   },
   "type": "module",
   "devDependencies": {
-    "bun-types": "latest"
+    "autoprefixer": "^10.4.17",
+    "bun-types": "latest",
+    "postcss": "^8.4.34",
+    "tailwindcss": "^3.4.1"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -19,6 +22,8 @@
     "flowbite": "^2.2.1",
     "method-override": "^3.0.0",
     "mongoose": "^8.0.3",
-    "tailwind": "latest"
+    "morgan": "^1.10.0",
+    "tailwind": "latest",
+    "tw-elements": "^1.1.0"
   }
 }
