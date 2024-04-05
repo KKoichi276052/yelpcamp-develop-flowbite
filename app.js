@@ -7,23 +7,17 @@ const ejsMate = require("ejs-mate");
 const mongoose = require("mongoose");
 const Campground = require("./models/campground");
 const methodOverride = require("method-override");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const { v4: uuid } = require("uuid");
 
-app.use(morgan("tiny"));
-morgan.token("id", function getId(req) {
-  return req.id;
-});
-
-app.use(assignId);
-app.use(morgan(":id :method :url :response-time"));
+// app.use(morgan("tiny"));
 
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(methodOverride("_method"));
 // app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static("public"));
-app.set("view engine", "ejs");
+app.set("view engine", "ejs");r
 // app.set("views", path.join(__dirname, "/views"));
 app.set("views", path.join(__dirname, "/views"));
 app.engine("ejs", ejsMate);
